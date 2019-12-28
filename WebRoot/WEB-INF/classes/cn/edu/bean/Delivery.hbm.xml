@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="cn.edu.bean.Delivery" table="deliveryinfo" catalog="test">
+        <id name="delivery_id" type="java.lang.Integer">
+            <column name="delivery_id" />
+            <generator class="native"></generator>
+        </id>
+        <property name="id_number" type="java.lang.Integer">
+            <column name="id_number" length="50" />
+        </property>
+        <property name="phone_number" type="java.lang.String">
+            <column name="phone_number"  />
+        </property>
+        <property name="punctuality_rate" type="java.lang.Double">
+            <column name="punctuality_rate" />
+        </property>
+        <property name="login_time" type="java.lang.String">
+            <column name="login_time"  />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="password"  />
+        </property>
+        <property name="status" type="java.lang.Integer">
+            <column name="status"  />
+        </property>
+    </class>
+</hibernate-mapping>

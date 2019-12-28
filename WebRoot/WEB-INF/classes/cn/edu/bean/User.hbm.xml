@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="cn.edu.bean.User" table="test" catalog="test">
+        <id name="order_id" type="java.lang.Integer">
+            <column name="order_id" />
+            <generator class="native"></generator>
+        </id>
+ 
+        <property name="delivery_id" type="java.lang.Integer">
+            <column name="delivery_id" length="30" />
+        </property>
+        <property name="starting_point" type="java.lang.String">
+            <column name="starting_point" />
+        </property>
+        <property name="destination" type="java.lang.String">
+            <column name="destination" length="30" />
+        </property>
+        <property name="latest_take_time" type="java.lang.String">
+            <column name="latest_take_time" length="30" />
+        </property>
+        <property name="latest_arrive_time" type="java.lang.String">
+            <column name="latest_arrive_time" length="30" />
+        </property>
+        <property name="price" type="java.lang.Double">
+            <column name="price" length="30" />
+        </property>
+        <property name="notes" type="java.lang.String">
+            <column name="notes" length="30" />
+        </property>
+        <property name="phone" type="java.lang.String">
+            <column name="phone" length="30" />
+        </property>
+        <property name="status" type="java.lang.String">
+            <column name="status" length="30" />
+        </property>
+        <property name="comment" type="java.lang.String">
+            <column name="comment" length="30" />
+        </property>
+      
+    </class>
+</hibernate-mapping>

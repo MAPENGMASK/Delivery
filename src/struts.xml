@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="delivery'" extends="struts-default" namespace="/">
+		<action name="deliveryToUpdate" class="cn.edu.action.DeliveryAction" method="toUpdate">
+			<result name="toUpdate">/delivery/update_deliveryinfo.jsp</result>
+		</action>
+		<action name="deliveryUpdate" class="cn.edu.action.DeliveryAction" method="update">
+			<result name="update">/delivery/detail_deliveryinfo.jsp</result>
+		</action>
+		<action name="deliveryToDetail" class="cn.edu.action.DeliveryAction" method="toDetail">
+			<result name="toDetail">/delivery/detail_deliveryinfo.jsp</result>
+		</action>
+		<action name="mine" class="cn.edu.action.DeliveryAction" method="getmine">
+			<result name="success">/delivery/mine.jsp</result>
+			<result name="fail">/delivery/fail.jsp</result>
+			
+		</action>
+		<action name="deliveryAdd" class="cn.edu.action.DeliveryAction" method="add">
+			<result name="add">/delivery/detail_deliveryinfo.jsp</result> 
+		</action>
+		<action name="login" class="cn.edu.action.DeliveryAction" method="login">
+			<result name="login">/delivery/detail_deliveryinfo.jsp</result>
+			<result name="fail">/delivery/login.jsp</result>
+		</action>				
+	</package>
+	<package name="user'" extends="struts-default" namespace="/">	
+		<action name="userToList" class="cn.edu.action.UserAction" method="toList">
+			<result name="toList">/list.jsp</result>
+		</action>
+		<action name="userToAdd" class="cn.edu.action.UserAction" method="add">
+		    <result name="input">/list.jsp</result>
+		</action>
+		<action name="userUpdate" class="cn.edu.action.UserAction" method="update">
+			<result name="toList">/list.jsp</result>
+		</action>
+		<action name="Myorder" class="cn.edu.action.UserAction" method="mine">
+			<result name="YES">/mine.jsp</result>
+			<result name="NO">/index.jsp</result>
+			<result name="None">/index2.jsp</result>
+		</action>
+		<action name="userToDetail" class="cn.edu.action.UserAction" method="toDetail">
+			<result name="toDetail">/detailUser.jsp</result>
+		</action>	
+<!-- 		<action name="userAdd" class="cn.edu.action.UserAction" method="add"> -->
+<!-- 			<result name="toList">/index.jsp</result> -->
+<!-- 			<result name="input">/addUser.jsp</result>   -->
+<!-- 		</action> -->
+<!-- 		<action name="userToUpdate" class="cn.edu.action.UserAction" method="toUpdate"> -->
+<!-- 			<result name="toUpdate">/updateUser.jsp</result> -->
+<!-- 		</action> -->
+
+<!-- 		<action name="userDelete" class="cn.edu.action.UserAction" method="delete"> -->
+<!-- 			<result name="toList">/index.jsp</result> -->
+<!-- 		</action> -->
+						
+	</package>
+</struts>    
